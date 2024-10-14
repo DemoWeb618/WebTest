@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.6 on darwin)" generated="2024-10-14T21:49:51.630108" rpa="false" schemaversion="5">
+<suite id="s1" name="FutureSkillRegis" source="/Users/a007377/Documents/Project/Demo_Robot/testscript/FutureSkillRegis.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-10-14T21:49:51.705104" level="INFO">Opening browser 'chrome' to base url 'https://futureskill.co/'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-14T21:49:51.704970" elapsed="1.480563"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to register FutureSkill" line="13">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary" type="SETUP">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-14T21:49:53.186418" elapsed="0.371548"/>
+</kw>
+<kw name="FutureSkill page should display homepage and display message as &quot;สมัครสมาชิก&quot;" owner="HomePage" source_name="FutureSkill page should display homepage and display message as &quot;${expected_text}&quot;">
+<kw name="Wait until element is ready then verify text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:53.611754" level="INFO">Current page contains text 'สมัครสมาชิก'.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-14T21:49:53.559184" elapsed="0.052636"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:53.559041" elapsed="0.052856"/>
+</kw>
+<arg>${expected_text}</arg>
+<status status="PASS" start="2024-10-14T21:49:53.558591" elapsed="0.053357"/>
+</kw>
+<status status="PASS" start="2024-10-14T21:49:53.558363" elapsed="0.053650"/>
+</kw>
+<kw name="User click register button and enter the information then click submit" owner="RegisterPage">
+<kw name="Wait until element is ready then click element" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:53.612710" level="INFO">Clicking element '//button[contains(text(), "สมัครสมาชิก")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:53.612528" elapsed="2.564712"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:53.612420" elapsed="2.565217"/>
+</kw>
+<arg>//button[contains(text(), "สมัครสมาชิก")]</arg>
+<status status="PASS" start="2024-10-14T21:49:53.612307" elapsed="2.565539"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.179432" level="INFO">Typing text 'Get_1234@gmail.com' into text field 'name=email'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.179121" elapsed="0.231731"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.178832" elapsed="0.232082"/>
+</kw>
+<arg>name=email</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-10-14T21:49:56.178215" elapsed="0.232789"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.411581" level="INFO">Typing text 'Nophasit' into text field 'name=firstName'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.411453" elapsed="0.043962"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.411320" elapsed="0.044168"/>
+</kw>
+<arg>name=firstName</arg>
+<arg>${firstName}</arg>
+<status status="PASS" start="2024-10-14T21:49:56.411132" elapsed="0.044404"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.456100" level="INFO">Typing text 'Suwannathan' into text field 'name=lastName'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.455985" elapsed="0.049284"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.455870" elapsed="0.049472"/>
+</kw>
+<arg>name=lastName</arg>
+<arg>${lastName}</arg>
+<status status="PASS" start="2024-10-14T21:49:56.455658" elapsed="0.049727"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.506015" level="INFO">Typing text '0858220023' into text field 'name=phoneNumber'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.505903" elapsed="0.047442"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.505789" elapsed="0.047627"/>
+</kw>
+<arg>name=phoneNumber</arg>
+<arg>${phoneNumber}</arg>
+<status status="PASS" start="2024-10-14T21:49:56.505547" elapsed="0.047914"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.554051" level="INFO">Typing text 'Get123456' into text field 'name=newPassword'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.553905" elapsed="0.066275"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.553789" elapsed="0.066552"/>
+</kw>
+<arg>name=newPassword</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-14T21:49:56.553587" elapsed="0.066834"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.621326" level="INFO">Typing text 'Get123456' into text field 'name=confirmPassword'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.621159" elapsed="0.051395"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>input text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.620920" elapsed="0.051723"/>
+</kw>
+<arg>name=confirmPassword</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-14T21:49:56.620671" elapsed="0.052015"/>
+</kw>
+<kw name="Wait until element is ready then select checkbox" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.673373" level="INFO">Selecting checkbox 'name=consent'.</msg>
+<arg>${locator}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.673197" elapsed="0.044923"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Select Checkbox</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.673093" elapsed="0.045108"/>
+</kw>
+<arg>name=consent</arg>
+<status status="PASS" start="2024-10-14T21:49:56.672919" elapsed="0.045321"/>
+</kw>
+<kw name="Wait until element is ready then click element" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:56.718708" level="INFO">Clicking element '//button[contains(text(), "สมัครสมาชิก")]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.718595" elapsed="0.043290"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.718499" elapsed="0.043443"/>
+</kw>
+<arg>//button[contains(text(), "สมัครสมาชิก")]</arg>
+<status status="PASS" start="2024-10-14T21:49:56.718342" elapsed="0.043643"/>
+</kw>
+<status status="PASS" start="2024-10-14T21:49:53.612171" elapsed="3.149840"/>
+</kw>
+<kw name="After registeration, page display the OTP sending to phone message as &quot;ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์&quot;" owner="OtpPage" source_name="After registeration, page display the OTP sending to phone message as &quot;${expected_text}&quot;">
+<kw name="Wait until element is ready then verify text" owner="Common">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:57.044991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-14T21:49:57.045147" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000102e88274 cxxbridge1$str$ptr + 1907280
+1   chromedriver                        0x0000000102e8075c cxxbridge1$str$ptr + 1875768
+2   chromedriver                        0x0000000102a94260 cxxbridge1$string$len + 89488
+3   chromedriver                        0x0000000102a9934c cxxbridge1$string$len + 110204
+4   chromedriver                        0x0000000102a9aabc cxxbridge1$string$len + 116204
+5   chromedriver                        0x0000000102a9ab34 cxxbridge1$string$len + 116324
+6   chromedriver                        0x0000000102ada028 cxxbridge1$string$len + 375640
+7   chromedriver                        0x0000000102b1404c cxxbridge1$string$len + 613244
+8   chromedriver                        0x0000000102b127d0 cxxbridge1$string$len + 606976
+9   chromedriver                        0x0000000102acd12c cxxbridge1$string$len + 322652
+10  chromedriver                        0x0000000102acdd7c cxxbridge1$string$len + 325804
+11  chromedriver                        0x0000000102e50504 cxxbridge1$str$ptr + 1678560
+12  chromedriver                        0x0000000102e54e6c cxxbridge1$str$ptr + 1697352
+13  chromedriver                        0x0000000102e35618 cxxbridge1$str$ptr + 1568244
+14  chromedriver                        0x0000000102e5573c cxxbridge1$str$ptr + 1699608
+15  chromedriver                        0x0000000102e26bbc cxxbridge1$str$ptr + 1508248
+16  chromedriver                        0x0000000102e71854 cxxbridge1$str$ptr + 1814576
+17  chromedriver                        0x0000000102e719ac cxxbridge1$str$ptr + 1814920
+18  chromedriver                        0x0000000102e803fc cxxbridge1$str$ptr + 1874904
+19  libsystem_pthread.dylib             0x000000019e54af94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019e545d34 thread_start + 8
+</msg>
+<arg>${locator}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-10-14T21:49:56.762660" elapsed="0.285491">StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=129.0.6668.101); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+0   chromedriver                        0x0000000102e88274 cxxbridge1$str$ptr + 1907280
+1   chromedriver                        0x0000000102e8075c cxxbridge1$str$ptr + 1875768
+2   chromedriver                        0x0000000102a94260 cxxbridge1$string$len + 89488
+3   chromedriver                        0x0000000102a9934c cxxbridge1$string$len + 110204
+4   chromedriver                        0x0000000102a9aabc cxxbridge1$string$len + 116204
+5   chromedriver                        0x0000000102a9ab34 cxxbridge1$string$len + 116324
+6   chromedriver                        0x0000000102ada028 cxxbridge1$string$len + 375640
+    [ Message content over the limit has been removed. ]
+...er                        0x0000000102acdd7c cxxbridge1$string$len + 325804
+11  chromedriver                        0x0000000102e50504 cxxbridge1$str$ptr + 1678560
+12  chromedriver                        0x0000000102e54e6c cxxbridge1$str$ptr + 1697352
+13  chromedriver                        0x0000000102e35618 cxxbridge1$str$ptr + 1568244
+14  chromedriver                        0x0000000102e5573c cxxbridge1$str$ptr + 1699608
+15  chromedriver                        0x0000000102e26bbc cxxbridge1$str$ptr + 1508248
+16  chromedriver                        0x0000000102e71854 cxxbridge1$str$ptr + 1814576
+17  chromedriver                        0x0000000102e719ac cxxbridge1$str$ptr + 1814920
+18  chromedriver                        0x0000000102e803fc cxxbridge1$str$ptr + 1874904
+19  libsystem_pthread.dylib             0x000000019e54af94 _pthread_start + 136
+20  libsystem_pthread.dylib             0x000000019e545d34 thread_start + 8</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-14T21:49:59.062476" level="INFO">Current page contains text 'ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์'.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-14T21:49:59.048903" elapsed="0.013696"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-14T21:49:56.762564" elapsed="2.300149"/>
+</kw>
+<arg>${expected_text}</arg>
+<status status="PASS" start="2024-10-14T21:49:56.762406" elapsed="2.300404"/>
+</kw>
+<status status="PASS" start="2024-10-14T21:49:56.762178" elapsed="2.300698"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-14T21:50:01.064472" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-14T21:49:59.063123" elapsed="2.001680"/>
+</kw>
+<status status="PASS" start="2024-10-14T21:49:53.185913" elapsed="7.879553"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-14T21:50:01.067019" elapsed="0.137103"/>
+</kw>
+<status status="PASS" start="2024-10-14T21:49:51.631179" elapsed="9.573025"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="FutureSkillRegis">FutureSkillRegis</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
